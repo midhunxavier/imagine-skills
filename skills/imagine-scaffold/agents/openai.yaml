@@ -1,4 +1,0 @@
-interface:
-  display_name: "Imagine scaffold"
-  short_description: "Scaffold Imagine projects and figures"
-  default_prompt: "Use $imagine-scaffold to scaffold a new Imagine project and add paper-ready figure templates."

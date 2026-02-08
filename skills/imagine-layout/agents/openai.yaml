@@ -1,4 +1,0 @@
-interface:
-  display_name: "Imagine layout"
-  short_description: "Multi-panel figure composition"
-  default_prompt: "Use $imagine-layout to turn several sub-figures into a publication-ready multi-panel figure in Imagine."

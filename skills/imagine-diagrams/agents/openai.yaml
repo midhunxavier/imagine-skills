@@ -1,4 +1,0 @@
-interface:
-  display_name: "Imagine diagrams"
-  short_description: "Pure-SVG scientific diagrams"
-  default_prompt: "Use $imagine-diagrams to build a clean pure-SVG pipeline/architecture diagram in Imagine."

@@ -3,33 +3,44 @@ name: imagine-best-practices
 description: Publication-quality scientific figures with the Imagine framework (React → SVG/PNG). Use when designing, reviewing, or exporting charts/diagrams/multi-panel figures for papers, posters, or preprints, especially when you need mm+dpi sizing, vector-first SVG, typography/color guidance, and final submission checks.
 ---
 
-# imagine-best-practices
+## When to use
 
-Install:
+Use this skill whenever you are working on Imagine figures for scientific articles, especially when you need:
 
-`$ npx skills add https://github.com/midhunxavier/imagine-skills --skill imagine-best-practices`
+- publication-oriented sizing (`mm` + `dpi`)
+- SVG-first figure components
+- chart/diagram/multi-panel/math patterns
+- deterministic scaffolding for new projects and figures
+- reliable PNG/SVG export and renderer debugging
 
-## Quick workflow (paper-ready)
+## Scaffolding
 
-1. Pick a target size in **mm** (journal column width) + **dpi** for PNG export.
-2. Implement the figure as **pure SVG** (avoid `foreignObject`) for robust vector output.
-3. Use consistent typography, line weights, and color (colorblind-safe).
-4. Export `svg` for final submission; export `png` for drafts or systems that don’t embed SVG well.
+When creating projects and figures, load [./rules/scaffold-cli.md](./rules/scaffold-cli.md) and [./rules/scaffold-templates.md](./rules/scaffold-templates.md) first.
 
-## References
+## How to use
 
-- [references/project-structure.md](./references/project-structure.md) — Files/folders: `projects/<id>/`, `project.ts`, `manifest.ts`, `figures/`, `props.json`, previews.
-- [references/manifest-and-variants.md](./references/manifest-and-variants.md) — `FigureManifestItem`, variants, `px` vs `mm+dpi`, props, controls.
-- [references/components-svg-only.md](./references/components-svg-only.md) — Writing figure components that export clean SVG.
-- [references/publication-quality.md](./references/publication-quality.md) — Typography, sizing, color, multi-panel conventions, checklist.
-- [references/rendering-and-export.md](./references/rendering-and-export.md) — `npm run render` flags, outputs, dev vs build.
-- [references/troubleshooting.md](./references/troubleshooting.md) — Empty SVG, clipping, fonts, MathJax, Playwright.
+Read individual rule files for focused implementation guidance:
 
-## Related skills
+- [rules/project-structure.md](./rules/project-structure.md) - Project folder and module conventions for Imagine
+- [rules/manifest-and-variants.md](./rules/manifest-and-variants.md) - Figure manifest schema, variants, props, controls, sizing
+- [rules/components-svg-only.md](./rules/components-svg-only.md) - SVG-first component patterns for clean vector export
+- [rules/publication-quality.md](./rules/publication-quality.md) - Paper-ready design checklist (size, typography, color, multi-panel)
+- [rules/rendering-and-export.md](./rules/rendering-and-export.md) - Render pipeline and export workflows
+- [rules/troubleshooting.md](./rules/troubleshooting.md) - Common rendering and export failures
 
-- Use `imagine-scaffold` to create new projects/figures with ready-to-render templates and manifest insertion.
-- Use `imagine-charts` for chart layout + D3 scale/axis patterns.
-- Use `imagine-diagrams` for pure-SVG diagrams (boxes/arrows/callouts).
-- Use `imagine-layout` for multi-panel composition and panel labels.
-- Use `imagine-math` for MathJax/`MathSvg` equation figures.
-- Use `imagine-rendering` for export workflows and renderer debugging.
+- [rules/scaffold-cli.md](./rules/scaffold-cli.md) - `new_project.mjs` and `new_figure.mjs` usage
+- [rules/scaffold-templates.md](./rules/scaffold-templates.md) - Included templates and default kind mappings
+
+- [rules/chart-patterns.md](./rules/chart-patterns.md) - D3 scale/axis/grid/legend chart patterns
+- [rules/publication-chart-style.md](./rules/publication-chart-style.md) - Chart typography, stroke, marker, and density standards
+
+- [rules/diagram-primitives.md](./rules/diagram-primitives.md) - Box/Arrow/Label/Callout usage
+- [rules/layout-and-spacing.md](./rules/layout-and-spacing.md) - Diagram alignment and spacing heuristics
+
+- [rules/multi-panel-guidelines.md](./rules/multi-panel-guidelines.md) - Panel labels, shared legends, spacing
+
+- [rules/mathjax-and-rendering.md](./rules/mathjax-and-rendering.md) - MathJax behavior in render/export
+- [rules/latex-authoring-tips.md](./rules/latex-authoring-tips.md) - LaTeX writing patterns for figure text
+
+- [rules/render-cli.md](./rules/render-cli.md) - Renderer CLI cookbook
+- [rules/debugging.md](./rules/debugging.md) - Renderer debugging playbook

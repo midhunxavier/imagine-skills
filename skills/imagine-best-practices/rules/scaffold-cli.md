@@ -9,7 +9,7 @@ If the skill is installed outside your repo (for example under `~/.agents/skills
 Create `projects/<projectId>/` with `project.ts`, `manifest.ts` (with insertion markers), and `props.json`.
 
 ```bash
-node skills/imagine-scaffold/scripts/new_project.mjs --id <projectId> --title "<Title>" \
+node skills/imagine-best-practices/scripts/new_project.mjs --id <projectId> --title "<Title>" \
   [--description "<Desc>"] [--with-hello] [--force]
 ```
 
@@ -22,7 +22,7 @@ Notes:
 Create `projects/<projectId>/figures/<figureId>.tsx` from a template and (by default) update `projects/<projectId>/manifest.ts`.
 
 ```bash
-node skills/imagine-scaffold/scripts/new_figure.mjs --project <projectId> --id <figureId> --kind <kind> \
+node skills/imagine-best-practices/scripts/new_figure.mjs --project <projectId> --id <figureId> --kind <kind> \
   [--title "<Title>"] [--size <sizeSpec>] [--background white|transparent] \
   [--force] [--no-manifest-edit]
 ```
