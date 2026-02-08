@@ -5,7 +5,7 @@ description: Best practices for creating scientific visualizations, charts, diag
 
 # imagine-best-practices
 
-`$ npx skills add https://github.com/melwin-dev/imagine-skills --skill imagine-best-practices`
+`$ npx skills add https://github.com/midhunxavier/imagine-skills --skill imagine-best-practices`
 
 ## When to use
 
