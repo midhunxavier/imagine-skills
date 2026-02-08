@@ -1,0 +1,4 @@
+interface:
+  display_name: "Imagine math"
+  short_description: "Equations and LaTeX in SVG"
+  default_prompt: "Use $imagine-math to create a paper-ready equation figure in Imagine using MathJax SVG output."

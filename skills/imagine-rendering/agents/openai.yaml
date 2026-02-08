@@ -1,0 +1,4 @@
+interface:
+  display_name: "Imagine rendering"
+  short_description: "Export SVG/PNG + debug renderer"
+  default_prompt: "Use $imagine-rendering to export my Imagine figures and debug empty SVG/Playwright/font issues."

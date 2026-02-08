@@ -1,0 +1,4 @@
+interface:
+  display_name: "Imagine charts"
+  short_description: "Publication-ready charts in Imagine"
+  default_prompt: "Use $imagine-charts to implement a paper-ready chart figure (axes, scales, ticks, legend) in Imagine."

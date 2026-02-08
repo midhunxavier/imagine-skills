@@ -1,0 +1,4 @@
+interface:
+  display_name: "Imagine best practices"
+  short_description: "Publication-quality scientific figures"
+  default_prompt: "Use $imagine-best-practices to review my Imagine figure for paper-ready SVG/PNG export."

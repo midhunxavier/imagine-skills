@@ -1,22 +1,35 @@
 ---
 name: imagine-best-practices
-description: Best practices for creating scientific visualizations, charts, diagrams, and multi-panel figures using the Imagine framework
+description: Publication-quality scientific figures with the Imagine framework (React → SVG/PNG). Use when designing, reviewing, or exporting charts/diagrams/multi-panel figures for papers, posters, or preprints, especially when you need mm+dpi sizing, vector-first SVG, typography/color guidance, and final submission checks.
 ---
 
 # imagine-best-practices
 
+Install:
+
 `$ npx skills add https://github.com/midhunxavier/imagine-skills --skill imagine-best-practices`
 
-## When to use
+## Quick workflow (paper-ready)
 
-Use this skill when developing or modifying figures in the Imagine framework, especially for creating scientific visualizations, charts, diagrams, and multi-panel figures for publication.
+1. Pick a target size in **mm** (journal column width) + **dpi** for PNG export.
+2. Implement the figure as **pure SVG** (avoid `foreignObject`) for robust vector output.
+3. Use consistent typography, line weights, and color (colorblind-safe).
+4. Export `svg` for final submission; export `png` for drafts or systems that don’t embed SVG well.
 
-## How to use
+## References
 
-Read individual rule files for detailed explanations and code examples:
+- [references/project-structure.md](./references/project-structure.md) — Files/folders: `projects/<id>/`, `project.ts`, `manifest.ts`, `figures/`, `props.json`, previews.
+- [references/manifest-and-variants.md](./references/manifest-and-variants.md) — `FigureManifestItem`, variants, `px` vs `mm+dpi`, props, controls.
+- [references/components-svg-only.md](./references/components-svg-only.md) — Writing figure components that export clean SVG.
+- [references/publication-quality.md](./references/publication-quality.md) — Typography, sizing, color, multi-panel conventions, checklist.
+- [references/rendering-and-export.md](./references/rendering-and-export.md) — `npm run render` flags, outputs, dev vs build.
+- [references/troubleshooting.md](./references/troubleshooting.md) — Empty SVG, clipping, fonts, MathJax, Playwright.
 
-- [rules/structure.md](./rules/structure.md) - Project organization: `project.ts`, `manifest.ts`, and `figures/` directory.
-- [rules/manifest.md](./rules/manifest.md) - Defining figures, variants, sizes (px vs mm), and props in `manifest.ts`.
-- [rules/components.md](./rules/components.md) - Writing React components for figures, using props, and ensuring SVG compatibility.
-- [rules/scientific.md](./rules/scientific.md) - Best practices for scientific figures: high DPI, vector output, consistent typography, and D3 usage.
-- [rules/rendering.md](./rules/rendering.md) - Using the CLI (`npm run render`) to export PNG/SVG, debug modes, and output handling.
+## Related skills
+
+- Use `imagine-scaffold` to create new projects/figures with ready-to-render templates and manifest insertion.
+- Use `imagine-charts` for chart layout + D3 scale/axis patterns.
+- Use `imagine-diagrams` for pure-SVG diagrams (boxes/arrows/callouts).
+- Use `imagine-layout` for multi-panel composition and panel labels.
+- Use `imagine-math` for MathJax/`MathSvg` equation figures.
+- Use `imagine-rendering` for export workflows and renderer debugging.
