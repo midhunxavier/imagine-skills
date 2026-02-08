@@ -1,8 +1,11 @@
+---
+name: imagine-best-practices
+description: Best practices for creating scientific visualizations, charts, diagrams, and multi-panel figures using the Imagine framework
+---
+
 # imagine-best-practices
 
 `$ npx skills add https://github.com/melwin-dev/imagine-skills --skill imagine-best-practices`
-
-SKILL.md
 
 ## When to use
 
